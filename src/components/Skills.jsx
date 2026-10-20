@@ -6,56 +6,72 @@ import {
     SiReact,
     SiTailwindcss,
     SiFigma,
-    SiGithub
+    SiGithub,
+    PenTool,
+    Sparkles
 } from '../assets/Icons.jsx'
 
 const skills = [
     {
         id:1,
         Icon:SiHtml5,
-        skill: 'HTML'
+        skill: 'HTML',
+        color: 'color-Html'
     },
 
     {
         id:2,
         Icon:FaCss3,
-        skill: 'CSS'
+        skill: 'CSS',
+        color:'color-Css'
     },
 
     {
         id:3,
         Icon:FaJs,
-        skill: 'JS'
+        skill: 'JS',
+        color:'color-JS'
     },
 
     {
         id:4,
         Icon:SiReact,
-        skill: 'React'
+        skill: 'React',
+        color:'color-React'
     },
 
     {
         id:5,
         Icon:SiTailwindcss,
-        skill: 'Tailwind CSS'
+        skill: 'Tailwind CSS',
+        color:'color-TailwindCss'
     },
 
     {
         id:6,
         Icon:SiFigma,
-        skill: 'Figma'
+        skill: 'Figma',
+        color:'color-Figma'
     },
 
     {
         id:7,
         Icon:SiGithub,
-        skill: 'Git & GitHub'
+        skill: 'Git & GitHub',
+        color:'color-GitHub'
     },
     {
         id:8,
-        Icon:SiHtml5,
-        skill: 'UX/UI'
-    } 
+        Icon:PenTool,
+        skill: 'UX/UI',
+        color:'color-colorAcentPrimary'
+    },
+    {
+        id:9,
+        Icon:Sparkles,
+        skill: 'Heramientas de IA',
+        color:'color-Css'
+    }
 ]
 
 export function Skills() {
@@ -76,9 +92,9 @@ export function Skills() {
                 mt-3.5
                 '>
                     {
-                        skills.map(({Icon, skill})=>{
+                        skills.map(({Icon, skill, color})=>{
                             return(
-                                <SkillModal Icon={Icon} skill={skill}></SkillModal>
+                                <SkillModal Icon={Icon} skill={skill} color={color}></SkillModal>
                             )
                         })
                     }

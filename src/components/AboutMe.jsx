@@ -1,3 +1,4 @@
+import FondoCuarto from '../assets/FondoCuarto.png'
 
 export function AboutMe() {
     return(
@@ -25,12 +26,13 @@ export function AboutMe() {
                     Me gusta explorar y aprender nuevas tecnologías, trabajar en equipo y comunicar efectivamente mis ideas. 
                 </p>
 
-                <div className='
-                bg-black
-                h-20 w-full
+
+                <img src={FondoCuarto} alt='Fondo Cuarto' className='
+                w-full h-30 
+                object-cover 
                 border border-colorSutilBoard rounded-xl
-                '>
-                </div>
+                '/>
+                
             </article>
         </section>
     )
