@@ -4,25 +4,18 @@ export function ProjectModal({img, name, description, herramientas}) {
         <div className='
         border border-colorSutilBoard rounded-xl
         '>
-            <div className='
-            text-colorTextSecondary
-            bg-colorElevatedCard
-            '> {img} </div>
+
+            <img src={img} alt={name} className='
+            w-full h-30 object-cover rounded-t-xl
+            '/>
 
             <div className='
-            px-3 pt-3 pb-2.5
+            px-3 pt-3 pb-3
             '>
-                <span className='
-                text-colorTextSecondary text-sm
-                '> {name} </span>
-
-                <p className='
-                text-colorTextTerciary text-xs
-                '> {description} </p>
 
                 <div className='
                 flex gap-3
-                mt-2.5
+                mb-2.5
                 '>
                     {
                         herramientas.map((herramienta)=>{
@@ -39,6 +32,14 @@ export function ProjectModal({img, name, description, herramientas}) {
                         })
                     }
                 </div>
+
+                <span className='
+                text-colorTextSecondary text-sm
+                '> {name} </span>
+
+                <p className='
+                text-colorTextTerciary text-xs
+                '> {description} </p>
             </div>
         </div>
     )

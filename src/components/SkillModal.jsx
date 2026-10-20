@@ -1,8 +1,8 @@
 
-export function SkillModal({Icon, skill}) {
+export function SkillModal({Icon, skill, color}) {
+    
     return(
         <div className='
-        text-colorTextTerciary
         bg-colorSurfaceCard
         py-3
         border border-colorSutilBoard rounded-xl
@@ -11,7 +11,8 @@ export function SkillModal({Icon, skill}) {
             <div className='
             flex justify-center
             '>
-                <Icon size={20} aria-hidden='true'/>
+                <Icon size={20} color= {`var(--${color})`} aria-hidden='true'/>
+                
             </div>
 
             <span className='

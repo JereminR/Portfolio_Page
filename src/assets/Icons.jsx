@@ -8,7 +8,9 @@ export {
   Users,
   Menu,
   X,
-  MapPin
+  MapPin,
+  PenTool,
+  Sparkles
 } from "lucide-react";
 
 export {

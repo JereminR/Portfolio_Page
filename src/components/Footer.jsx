@@ -31,7 +31,7 @@ const quickLinks = [
 export function Footer() {
     return(
         <footer className='
-        px-6 pt-6 pb-16
+        px-6 pt-6 pb-12
         border-t border-colorTextSecondary rounded-3xl
         '>
             <article>

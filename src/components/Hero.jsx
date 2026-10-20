@@ -1,5 +1,6 @@
 import {AptitudesModal} from './AptitudesModal.jsx'
 import {Code2, PanelsTopLeft, BookOpen, Users} from '../assets/Icons.jsx'
+import FondoPúrpura from '../assets/FondoPúrpura.png'
 
 const aptitudes = [
     {
@@ -28,7 +29,13 @@ export function Hero() {
 
 return(
         <section className='flex flex-col gap-4.5'>
-            <article className='border-b border-colorSutilBoard pb-9.5'>
+            <article
+            className='
+            -mx-6 px-6 -my-8 py-8
+            border-b border-colorSutilBoard pb-9.5
+            bg-no-repeat bg-bottom-right bg-cover'
+            style={{backgroundImage: `linear-gradient(rgba(8, 9, 20, 0.5), rgba(8, 9, 20, 0.5)), url(${FondoPúrpura})`}}
+            >
                 <span className='text-colorTextSecondary text-lg font-medium'> Bienvenido(a), soy </span>
                 <h1 className='text-colorTextPrimary text-3xl font-bold leading-tight'> 
                     Jeremin 

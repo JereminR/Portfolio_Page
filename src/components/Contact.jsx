@@ -18,17 +18,17 @@ export function Contact() {
                 text-xs text-colorTextTerciary
                 flex flex-col gap-1
                 '>
-                    <span className='flex gap-0.5 items-center'>
+                    <span className='flex gap-1 items-center'>
                         <MapPin size={20} strokeWidth={1.8} aria-hidden='true'
                         className='text-colorBrightnessPurple'/> 
                         <span> Lima, Perú</span>
                     </span>
-                    <span className='flex gap-0.5 items-center'>
+                    <span className='flex gap-1 items-center'>
                         <Mail size={20} aria-hidden='true'
                         className='text-colorBrightnessPurple'/>
                         <span> jereminromang@gmail.com </span>
                     </span>
-                    <FaLinkedin size={20} aria-hidden='true'/>
+                    <FaLinkedin size={20} color='var(--color-Linkedin)' aria-hidden='true'/>
                 </div>
             </article>
         </section>

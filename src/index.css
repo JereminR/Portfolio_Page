@@ -1,5 +1,16 @@
 @import 'tailwindcss';
 
+:root {
+  --color-Html: #e34f26;
+  --color-Css: #1572b6;
+  --color-JS: #f7df1e;
+  --color-React: #61dafb;
+  --color-TailwindCss: #06b6d4;
+  --color-Figma: #f24e1e;
+  --color-GitHub: #eee;
+  --color-Linkedin: #0a66c2;
+}
+
 @layer base {
   * {
     box-sizing: border-box;
@@ -8,7 +19,6 @@
   body {
     background-color: var(--color-colorBackgroundPrimary);
     font-family: "Inter", sans-serif;
-    height: 301dvh;
   }
 
   main {
@@ -25,6 +35,8 @@
 
   --color-colorAcentPrimary: #a855f7;
   --color-colorAcentSecondary: #d946ef;
+
+  --color-colorAcentThird: #e34f26;
 
   --color-colorBrightnessPurple: #c084fc;
 

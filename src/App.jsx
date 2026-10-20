@@ -15,10 +15,16 @@ function App() {
       <NavBar></NavBar>
       <main>
         <Hero></Hero>
-        <AboutMe></AboutMe>
-        <Skills></Skills>
-        <Projects></Projects>
-        <Contact></Contact>
+        <div className='
+        sm:flex sm:flex-row sm:gap-5'>
+          <AboutMe></AboutMe>
+          <Skills></Skills>
+        </div>
+        <div className='
+        sm:flex sm:flex-row sm:gap-5'>
+          <Projects></Projects>
+          <Contact></Contact>
+        </div>
       </main>
       <Footer></Footer>
     </>
