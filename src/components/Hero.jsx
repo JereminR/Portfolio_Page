@@ -34,7 +34,7 @@ return(
             -mx-6 px-6 -my-8 py-8
             border-b border-colorSutilBoard pb-9.5
             bg-no-repeat bg-bottom-right bg-cover'
-            style={{backgroundImage: `linear-gradient(rgba(8, 9, 20, 0.5), rgba(8, 9, 20, 0.5)), url(${FondoPúrpura})`}}
+            style={{backgroundImage: `linear-gradient(rgba(8, 9, 20, 0.6), rgba(8, 9, 20, 0.6)), url(${FondoPúrpura})`}}
             >
                 <span className='text-colorTextSecondary text-lg font-medium'> Bienvenido(a), soy </span>
                 <h1 className='text-colorTextPrimary text-3xl font-bold leading-tight'> 

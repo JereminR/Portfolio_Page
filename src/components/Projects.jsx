@@ -39,6 +39,7 @@ export function Projects() {
                 <h2 className='text-colorTextPrimary'> Proyectos </h2>
                 <div className='
                 flex flex-col gap-5 mt-3.5
+                md:grid md:grid-cols-2 md:gap-5
                 
                 '>
                     {

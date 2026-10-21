@@ -3,7 +3,9 @@ export function SkillModal({Icon, skill, color}) {
     
     return(
         <div className='
+        text-center
         bg-colorSurfaceCard
+        
         py-3
         border border-colorSutilBoard rounded-xl
         flex flex-col gap-2
