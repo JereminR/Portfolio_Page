@@ -31,11 +31,11 @@ const quickLinks = [
 export function Footer() {
     return(
         <footer className='
-        px-6 pt-6 pb-12
+        px-6 pt-6 pb-12 md:pb-7
         border-t border-colorTextSecondary rounded-3xl
+        md:grid md:grid-cols-2
         '>
-            <article>
-                <div className='
+            <div className='
                 text-colorTextPrimary
                 pb-6
                 border-b border-colorSutilBoard
@@ -62,12 +62,13 @@ export function Footer() {
                             })
                         }
                     </div>
-                </div>
+            </div>
 
-                <div className='
+            <div className='
                 text-sm font-medium
-                pt-5 pb-6
+                pt-5 pb-6 md:pt-0 
                 border-b border-colorSutilBoard
+
                 '>
                     <span className='
                     text-colorAcentPrimary
@@ -75,8 +76,7 @@ export function Footer() {
                     <ul className='
                     text-colorTextSecondary
                     mt-3
-                    flex flex-col
-                    gap-3
+                    flex flex-col gap-3 md:grid md:grid-cols-2 md:gap-3
                     '>
                         {
                             quickLinks.map(({label, href})=>{
@@ -84,16 +84,18 @@ export function Footer() {
                                     <li key={href} className='flex justify-between'>
                                         <span> {label}</span>
                                         <a href={href}></a>
-                                        <ChevronRight size={18} aria-hidden='true'/>
+                                        <ChevronRight size={18} aria-hidden='true'
+                                        className='md:hidden'
+                                        />
                                     </li>
                                 )
                             })
                         }
                         
                     </ul>
-                </div>
+            </div>
 
-                <div className='
+            <div className='
                 pt-5
                 flex justify-between
                 '>
@@ -110,8 +112,7 @@ export function Footer() {
                     '>
                         <ArrowUp size={12} aria-hidden='true'/>
                     </button>
-                </div>
-            </article>
+            </div>
         </footer>
     )
 }

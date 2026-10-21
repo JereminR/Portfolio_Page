@@ -15,14 +15,17 @@ export function NavBar () {
             text-4xl
             '
             >
-                <Menu size={24} strokeWidth={2} aria-hidden='true'/>
+                <Menu size={24} strokeWidth={2} aria-hidden='true'
+                className='md:hidden'
+                />
             </label>
             <nav className='
-             hidden
+             hidden md:flex gap-9 text-sm font-normal
             '>
-                <div> Home </div>
-                <div> About me </div>
-                <div> Contact </div>
+                <div> Inicio </div>
+                <div> Sobre mí </div>
+                <div> Proyectos </div>
+                <div> Contacto </div>
             </nav>
         </header>
     )

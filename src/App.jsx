@@ -12,21 +12,27 @@ function App() {
 
   return (
     <>
-      <NavBar></NavBar>
+      <NavBar/>
       <main>
-        <Hero></Hero>
+        <Hero/>
         <div className='
-        sm:flex sm:flex-row sm:gap-5'>
-          <AboutMe></AboutMe>
-          <Skills></Skills>
+        relative border-b border-colorSutilBoard
+        md:grid md:grid-cols-2 md:gap-6 lg:grid-cols-3
+        md:before:content-[""]
+        md:before:absolute md:before:top-0 md:before:bottom-0
+        md:before:left-1/2 md:before:w-px
+        md:before:my-5
+      md:before:bg-colorSutilBoard
+        '>
+          <AboutMe/>
+          <Skills/>
         </div>
-        <div className='
-        sm:flex sm:flex-row sm:gap-5'>
-          <Projects></Projects>
-          <Contact></Contact>
+        <div>
+          <Projects/>
+          <Contact/>
         </div>
       </main>
-      <Footer></Footer>
+      <Footer/>
     </>
   )
 }

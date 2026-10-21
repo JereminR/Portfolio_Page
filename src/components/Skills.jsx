@@ -78,7 +78,6 @@ export function Skills() {
     return(
         <section className='
         pt-5 pb-6
-        border-b border-colorSutilBoard
         '>
             <article>
                 <h3 className='
@@ -88,7 +87,8 @@ export function Skills() {
                 </h3>
 
                 <div className='
-                grid grid-cols-3 grid-rows-auto gap-3
+                items-center
+                grid grid-cols-3 grid-rows-auto gap-3 md:grid-cols-3 md:justify-center lg:grid-cols-4
                 mt-3.5
                 '>
                     {

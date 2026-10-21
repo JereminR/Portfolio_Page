@@ -16,17 +16,16 @@ export function Contact() {
                 '> ¿Tienes una idea o un proyecto? ¡Me encantaría saber de ti!</p>
                 <div className='
                 text-xs text-colorTextTerciary
-                flex flex-col gap-1
+                flex flex-col gap-1.5
                 '>
-                    <span className='flex gap-1 items-center'>
+                    <span className='flex gap-1.5 items-center'>
                         <MapPin size={20} strokeWidth={1.8} aria-hidden='true'
                         className='text-colorBrightnessPurple'/> 
                         <span> Lima, Perú</span>
                     </span>
-                    <span className='flex gap-1 items-center'>
+                    <span className='flex gap-1.5 items-center'>
                         <Mail size={20} aria-hidden='true'
                         className='text-colorBrightnessPurple'/>
-                        <span> jereminromang@gmail.com </span>
                     </span>
                     <FaLinkedin size={20} color='var(--color-Linkedin)' aria-hidden='true'/>
                 </div>
