@@ -1,2 +1,15 @@
 
 
+.hero-background::before {
+  position: absolute;
+  inset-block: 0;
+  left: 50%;
+  z-index: -1;
+  width: 100vw;
+  transform: translateX(-50%);
+  background-image: var(--hero-background);
+  background-position: center 45%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  content: "";
+}

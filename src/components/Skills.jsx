@@ -88,7 +88,7 @@ export function Skills() {
 
                 <div className='
                 items-center
-                grid grid-cols-3 grid-rows-auto gap-3 md:grid-cols-3 md:justify-center lg:grid-cols-4
+                grid grid-cols-3 grid-rows-auto gap-3 md:grid-cols-3 md:justify-center lg:grid-cols-3 lg:gap-2 xl:gap-3
                 mt-3.5
                 '>
                     {

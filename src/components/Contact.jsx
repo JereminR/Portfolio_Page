@@ -2,8 +2,9 @@ import {Mail, FaLinkedin, MapPin} from '../assets/Icons.jsx'
 
 export function Contact() {
     return(
-        <section className='
-        pt-5 pb-5
+        <section id='contacto'className='
+        pt-5 pb-1
+        lg:mt-5 lg:mb-6 lg:rounded-2xl lg:border lg:border-colorSutilBoard lg:px-4 lg:py-4
         '>
             <article>
                 <h3 className='
@@ -23,11 +24,7 @@ export function Contact() {
                         className='text-colorBrightnessPurple'/> 
                         <span> Lima, Perú</span>
                     </span>
-                    <span className='flex gap-1.5 items-center'>
-                        <Mail size={20} aria-hidden='true'
-                        className='text-colorBrightnessPurple'/>
-                    </span>
-                    <FaLinkedin size={20} color='var(--color-Linkedin)' aria-hidden='true'/>
+                    <FaLinkedin size={25} color='var(--color-Linkedin)' aria-hidden='true'/>
                 </div>
             </article>
         </section>

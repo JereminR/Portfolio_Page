@@ -10,7 +10,10 @@ export {
   X,
   MapPin,
   PenTool,
-  Sparkles
+  Sparkles,
+  Folder,
+  House,
+  UserRound
 } from "lucide-react";
 
 export {
@@ -18,7 +21,8 @@ export {
   SiHtml5,
   SiReact,
   SiTailwindcss,
-  SiFigma
+  SiFigma,
+  SiNotion
 } from "react-icons/si";
 
 
