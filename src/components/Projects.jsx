@@ -6,7 +6,7 @@ import {SiGithub, SiFigma, SiNotion} from '../assets/Icons.jsx';
 
 const projects = [
     {
-        id:1,
+        id:7,
         img: PortfolioPage,
         name: 'Portafolio personal',
         description: 'Mi sitio web personal, donde muestro mi perfil, mis proyectos, habilidades y más',
@@ -16,7 +16,7 @@ const projects = [
     },
     
     {
-        id:2,
+        id:8,
         img: VillainBanner,
         name: 'Villanos (UX/UI)',
         description: 'Caso de estudio sobre un análisis UX/UI de una página de villanos',
@@ -29,7 +29,7 @@ const projects = [
     },
     
     {
-        id:3,
+        id:9,
         img: TicTacToe,
         name: 'Tic-Tac-Toe 4x4',
         description: 'Videojuego de tic-tac-toe, donde el primero en completar 4 líneas gana',

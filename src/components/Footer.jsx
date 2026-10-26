@@ -1,7 +1,6 @@
 import {navItems} from '../constants/navItems.js';
 import {
   ChevronRight,
-  ArrowUp,
   SiGithub,
   FaLinkedin
 } from '../assets/Icons.jsx';
@@ -9,14 +8,16 @@ import {
 
 const socialLinks = [
   {
+    id: 1,
     name: "GitHub",
-    href: "https://github.com/JereminR",
+    link: "https://github.com/JereminR",
     Icon: SiGithub
   },
   
   {
+    id: 2,
     name: "FaLinkedIn",
-    href: "https://www.linkedin.com/in/jeremin-roman-6258ab3a0/",
+    link: "https://www.linkedin.com/in/jeremin-roman-6258ab3a0/",
     Icon: FaLinkedin
   }
 ];
@@ -46,9 +47,9 @@ export function Footer() {
                         flex gap-3
                         '>
                             {
-                                socialLinks.map(({name, href, Icon})=>{
+                                socialLinks.map(({id, name, link, Icon})=>{
                                     return(
-                                        <a key={name} href={href} name={name} target='_blank' rel='noreferrer'
+                                        <a key={id} href={link} name={name} target='_blank' rel='noreferrer'
                                         aria-label={name}
                                         className='
                                         p-2
@@ -100,22 +101,13 @@ export function Footer() {
 
             <div className='
                 pt-5 lg:pt-0
+                w-fit
                 flex justify-between
                 lg:flex-col lg:items-end lg:justify-between
                 '>
                     <span className='
                     text-xs text-colorTextTerciary
                     '> ©2026 Jeremin Roman. Todos los derechos reservados. </span>
-
-                    <button className='
-                    text-colorAcentSecondary
-                    bg-colorElevatedCard
-                    size-7
-                    border border-colorTextSecondary rounded-full
-                    flex justify-center items-center
-                    '>
-                        <ArrowUp size={12} aria-hidden='true'/>
-                    </button>
             </div>
         </footer>
     )

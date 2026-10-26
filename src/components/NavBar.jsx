@@ -1,4 +1,4 @@
-import {useEffect, useState} from 'react'
+import {useEffect, useRef, useState} from 'react'
 import {Folder, House, Mail, Menu, UserRound, X} from '../assets/Icons.jsx'
 import {FaLinkedin} from 'react-icons/fa'
 import {SiGithub} from 'react-icons/si'
@@ -13,22 +13,28 @@ const sectionIcons = {
 
 const socialLinks = [
     {
+        id: 19,
         name: 'LinkedIn',
-        href: 'https://www.linkedin.com/in/jeremin-roman-6258ab3a0/',
+        url: 'https://www.linkedin.com/in/jeremin-roman-6258ab3a0/',
         Icon: FaLinkedin
     },
     {
+        id: 20,
         name: 'GitHub',
-        href: 'https://github.com/JereminR',
+        url: 'https://github.com/JereminR',
         Icon: SiGithub
     }
 ]
 
 export function NavBar () {
+    //Estos son para las funcionalidades principales del navbar
     const [isMenuOpen, setIsMenuOpen] = useState(false)
     const [activeHref, setActiveHref] = useState(
         () => window.location.hash || '#inicio'
     )
+    const [isHidden, setIsHidden] = useState(false)
+    const lastScrollY = useRef(window.scrollY)
+    const downwardScrollStart = useRef(window.scrollY)
 
     useEffect(() => {
         const updateActiveHref = () => {
@@ -38,6 +44,43 @@ export function NavBar () {
         window.addEventListener('hashchange', updateActiveHref)
         return () => window.removeEventListener('hashchange', updateActiveHref)
     }, [])
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const currentScrollY = window.scrollY
+
+            if (window.innerWidth >= 768) {
+                setIsHidden(false)
+                downwardScrollStart.current = currentScrollY
+            } else if (isMenuOpen) {
+                setIsHidden(false)
+                downwardScrollStart.current = currentScrollY
+            } else if (currentScrollY < lastScrollY.current) {
+                setIsHidden(false)
+                downwardScrollStart.current = currentScrollY
+            } else if (currentScrollY - downwardScrollStart.current >= 80) {
+                setIsHidden(true)
+            }
+
+            lastScrollY.current = currentScrollY
+        }
+
+        const handleResize = () => {
+            const currentScrollY = window.scrollY
+            lastScrollY.current = currentScrollY
+            downwardScrollStart.current = currentScrollY
+            setIsHidden(false)
+        }
+
+        window.addEventListener('scroll', handleScroll, {passive: true})
+        window.addEventListener('resize', handleResize)
+        return () => {
+            window.removeEventListener('scroll', handleScroll)
+            window.removeEventListener('resize', handleResize)
+        }
+    }, [isMenuOpen])
+    //Hasta acá son las funcionalidades principales del navbar
+
 
     const renderNavLink = ({id, name, href}, isMobile = false) => {
         const Icon = sectionIcons[href]
@@ -65,11 +108,13 @@ export function NavBar () {
     }
 
     return (
-        <header className='
-        relative z-20
-        text-colorTextPrimary bg-colorNavBar
+        <header className={`
+        sticky top-0 z-20 md:sticky
+        text-colorTextPrimary bg-colorBackgroundPrimary
         border-b border-colorTextPrimary/15
-        '>
+        transition-transform duration-200 ease-in-out md:translate-y-0
+        ${isHidden ? '-translate-y-full' : ''}
+        `}>
             <div className='
             p-2.5 lg:px-6 lg:py-3 xl:px-8
             flex items-center justify-between
@@ -84,7 +129,14 @@ export function NavBar () {
                     aria-label={isMenuOpen ? 'Cerrar menú' : 'Abrir menú'}
                     aria-expanded={isMenuOpen}
                     aria-controls='mobile-navigation'
-                    onClick={() => setIsMenuOpen(open => !open)}
+                    onClick={() => {
+                        const shouldOpen = !isMenuOpen
+                        const currentScrollY = window.scrollY
+                        lastScrollY.current = currentScrollY
+                        downwardScrollStart.current = currentScrollY
+                        if (shouldOpen) setIsHidden(false)
+                        setIsMenuOpen(shouldOpen)
+                    }}
                     className='
                     p-1 text-colorTextSecondary transition-colors
                     hover:text-colorTextPrimary md:hidden
@@ -106,7 +158,9 @@ export function NavBar () {
                 <nav
                     id='mobile-navigation'
                     className='
-                    border-t border-colorSutilBoard px-3 pb-4 pt-3
+                    absolute left-0 right-0 top-full z-10
+                    border-t border-colorSutilBoard bg-colorBackgroundPrimary
+                    px-3 pb-4 pt-3 shadow-lg
                     md:hidden
                     '
                     aria-label='Navegación móvil'
@@ -118,10 +172,10 @@ export function NavBar () {
                     <div className='
                     mt-5 flex gap-6 border-t border-colorSutilBoard px-2 pt-4
                     '>
-                        {socialLinks.map(({name, href, Icon}) => (
+                        {socialLinks.map(({id, name, url, Icon}) => (
                             <a
-                                key={name}
-                                href={href}
+                                key={id}
+                                href={url}
                                 target='_blank'
                                 rel='noreferrer'
                                 aria-label={name}

@@ -24,7 +24,9 @@ export function Contact() {
                         className='text-colorBrightnessPurple'/> 
                         <span> Lima, Perú</span>
                     </span>
-                    <FaLinkedin size={25} color='var(--color-Linkedin)' aria-hidden='true'/>
+                    <a href='https://www.linkedin.com/in/jeremin-roman-6258ab3a0/' target='_blank' rel='noopener noreferrer' className='flex items-center gap-1.5'>
+                        <FaLinkedin size={25} color='var(--color-colorTextSecondary)' aria-hidden='true'/>
+                    </a>
                 </div>
             </article>
         </section>
