@@ -4,22 +4,22 @@ import FondoPúrpura from '../assets/FondoPúrpura.png'
 
 const aptitudes = [
     {
-        id:1,
+        id:3,
         Icon: Code2,
         aptitude: 'Desarrollo Web'
     },
     {
-        id:2,
+        id:4,
         Icon: PanelsTopLeft,
         aptitude:'Diseño de interfaces'
     },
     {
-        id:3,
+        id:5,
         Icon: BookOpen,
         aptitude:'Mentalidad de aprendizaje'
     },
     {
-        id:4,
+        id:6,
         Icon: Users,
         aptitude:'Trabajo en equipo'
     }
@@ -68,8 +68,8 @@ return(
                         transition-transform
                         hover:brightness-110
                     '> Ver proyectos </a>
-                    <button className='
-                    text-colorTextSecondary
+                    <a href='/CV.pdf' target='_blank' rel='noopener noreferrer' className='
+                    text-colorTextSecondary text-center
                         bg-colorBackgroundPrimary
                         border border-colorAcentPrimary rounded-lg
                         min-w-37
@@ -77,7 +77,7 @@ return(
                         cursor-pointer
                         transition-transform
                         hover:brightness-120
-                    '> CV </button>
+                    '> CV </a>
                 </div>
             </article>
 

@@ -13,61 +13,61 @@ import {
 
 const skills = [
     {
-        id:1,
+        id:10,
         Icon:SiHtml5,
         skill: 'HTML',
         color: 'color-Html'
     },
 
     {
-        id:2,
+        id:11,
         Icon:FaCss3,
         skill: 'CSS',
         color:'color-Css'
     },
 
     {
-        id:3,
+        id:12,
         Icon:FaJs,
         skill: 'JS',
         color:'color-JS'
     },
 
     {
-        id:4,
+        id:13,
         Icon:SiReact,
         skill: 'React',
         color:'color-React'
     },
 
     {
-        id:5,
+        id:14,
         Icon:SiTailwindcss,
         skill: 'Tailwind CSS',
         color:'color-TailwindCss'
     },
 
     {
-        id:6,
+        id:15,
         Icon:SiFigma,
         skill: 'Figma',
         color:'color-Figma'
     },
 
     {
-        id:7,
+        id:16,
         Icon:SiGithub,
         skill: 'Git & GitHub',
         color:'color-GitHub'
     },
     {
-        id:8,
+        id:17,
         Icon:PenTool,
         skill: 'UX/UI',
         color:'color-colorAcentPrimary'
     },
     {
-        id:9,
+        id:18,
         Icon:Sparkles,
         skill: 'Heramientas de IA',
         color:'color-Css'
@@ -92,9 +92,9 @@ export function Skills() {
                 mt-3.5
                 '>
                     {
-                        skills.map(({Icon, skill, color})=>{
+                        skills.map(({id, Icon, skill, color})=>{
                             return(
-                                <SkillModal Icon={Icon} skill={skill} color={color}></SkillModal>
+                                <SkillModal key={id} Icon={Icon} skill={skill} color={color}></SkillModal>
                             )
                         })
                     }

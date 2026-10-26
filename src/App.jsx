@@ -5,6 +5,7 @@ import {Skills} from './components/Skills.jsx'
 import {Projects} from './components/Projects.jsx'
 import {Contact} from './components/Contact.jsx'
 import {Footer} from './components/Footer.jsx'
+import {BackToTopButton} from './components/BackToTopButton.jsx'
 import './App.css'
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
         </div>
       </main>
       <Footer/>
+      <BackToTopButton/>
     </div>
   )
 }
