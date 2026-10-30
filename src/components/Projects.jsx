@@ -51,7 +51,7 @@ export function Projects() {
                 flex items-center gap-2 mb-2
                 font-medium
                 '>
-                    <FolderCode className='text-colorTextPrimary'/>
+                    <FolderCode className='text-colorAcentPrimary'/>
                     <h2 className='text-colorTextPrimary'> Proyectos </h2>
                 </div>
                 <div className='

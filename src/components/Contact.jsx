@@ -12,7 +12,7 @@ export function Contact() {
                 mb-2
                 flex items-center gap-2
                 '>
-                    <Mail className='text-colorTextPrimary'/>
+                    <Mail className='text-colorAcentPrimary'/>
                     <h3 className='
                     text-colorTextSecondary
                     mb-1
@@ -27,7 +27,7 @@ export function Contact() {
                 flex flex-col gap-1.5
                 '>
                     <a href='https://www.linkedin.com/in/jeremin-roman-6258ab3a0/' target='_blank' rel='noopener noreferrer' className='flex items-center gap-1.5'>
-                        <FaLinkedin size={30} color='var(--color-colorTextPrimary)' aria-hidden='true'/>
+                        <FaLinkedin size={28} color='var(--color-colorTextPrimary)' aria-hidden='true'/>
                     </a>
                 </div>
                 <div className='
