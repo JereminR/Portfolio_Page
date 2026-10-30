@@ -41,7 +41,13 @@ export function Footer() {
                     border-b border-colorSutilBoard
                     md:border-0
                     '>
-                        <span className='text-2xl'> JNR </span>
+                        <a href='#inicio' aria-label='Ir al inicio' className='
+                        text-2xl bg-linear-to-r from-purple-500 via-violet-600 to-fuchsia-500
+                        bg-clip-text text-transparent
+                        '>
+                            JNR
+                        </a>
+
                         <div className='
                         mt-3
                         flex gap-3

@@ -58,4 +58,10 @@
   /* TYPOGRAPHY */
   --font-sans: "Inter", sans-serif;
 
+  /* FONT SIZES */
+  --text-xxs: 11px;
+
+  /* ICONS */
+  --color-colorGithub: #eee;
+
 }

@@ -2,7 +2,7 @@ import {ProjectModal} from './ProjectModal.jsx'
 import TicTacToe from '../assets/TicTacToe.png'
 import VillainBanner from '../assets/VillainBanner.png'
 import PortfolioPage from '../assets/PortfolioPage.png'
-import {SiGithub, SiFigma, SiNotion} from '../assets/Icons.jsx';
+import {SiGithub, SiFigma, SiNotion, FolderCode} from '../assets/Icons.jsx';
 
 const projects = [
     {
@@ -47,7 +47,12 @@ export function Projects() {
         lg:col-span-2 lg:border-b-0
         '>
             <article>
-                <h2 className='text-colorTextPrimary'> Proyectos </h2>
+                <div className='
+                flex items-center gap-2 mb-2
+                '>
+                    <FolderCode className='text-colorTextPrimary'/>
+                    <h2 className='text-colorTextPrimary'> Proyectos </h2>
+                </div>
                 <div className='
                 flex flex-col gap-5 mt-3.5
                 md:grid md:grid-cols-2 md:gap-5

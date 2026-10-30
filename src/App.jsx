@@ -9,7 +9,6 @@ import {BackToTopButton} from './components/BackToTopButton.jsx'
 import './App.css'
 
 function App() {
-
   return (
     <div className='
       min-h-screen
@@ -20,8 +19,8 @@ function App() {
 
         <div className='
         relative border-b border-colorSutilBoard
-        md:grid md:grid-cols-2 md:gap-6 lg:grid-cols-3 lg:gap-6
-        xl:gap-8
+        md:grid md:grid-cols-[minmax(0,5fr)_minmax(0,5fr)] md:gap-10
+        lg:grid-cols-3
         '>
           <AboutMe/>
           <Skills/>

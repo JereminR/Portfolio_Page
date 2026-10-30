@@ -1,34 +1,13 @@
 import {AptitudesModal} from './AptitudesModal.jsx'
-import {Code2, PanelsTopLeft, BookOpen, Users} from '../assets/Icons.jsx'
 import FondoPúrpura from '../assets/FondoPúrpura.png'
-
-const aptitudes = [
-    {
-        id:3,
-        Icon: Code2,
-        aptitude: 'Desarrollo Web'
-    },
-    {
-        id:4,
-        Icon: PanelsTopLeft,
-        aptitude:'Diseño de interfaces'
-    },
-    {
-        id:5,
-        Icon: BookOpen,
-        aptitude:'Mentalidad de aprendizaje'
-    },
-    {
-        id:6,
-        Icon: Users,
-        aptitude:'Trabajo en equipo'
-    }
-]
 
 export function Hero() {
 
 return(
-        <section id='inicio' className='flex flex-col gap-4.5 lg:gap-5'>
+        <section id='inicio' className='
+        md:mb-5 lg:mb-6
+        flex flex-col gap-4.5 lg:gap-5
+        '>
             <article
             className='
             hero-background relative isolate
@@ -53,48 +32,35 @@ return(
                 leading-relaxed
                 lg:max-w-xl
                 '> 
-                Creo soluciones web que combinan diseño, funcionalidad y una gran experiencia de usuario. 
+                    Creo soluciones web que combinan diseño, funcionalidad y una gran experiencia de usuario. 
                 </p>
                 <div className='
                 flex gap-5
                 '>
                     <a href='#proyectos' className='
                     text-colorTextSecondary text-center
-                        bg-linear-to-r from-colorAcentPrimary to-violet-600
-                        border border-colorSutilBoard rounded-lg
-                        min-w-37
-                        py-3.5
-                        cursor-pointer
-                        transition-transform
-                        hover:brightness-110
+                    bg-linear-to-r from-colorAcentPrimary to-violet-600
+                    border border-colorSutilBoard rounded-lg
+                    min-w-37
+                    py-3.5
+                    cursor-pointer
+                    transition-transform
+                    hover:brightness-110
                     '> Ver proyectos </a>
                     <a href='/CV.pdf' target='_blank' rel='noopener noreferrer' className='
                     text-colorTextSecondary text-center
-                        bg-colorBackgroundPrimary
-                        border border-colorAcentPrimary rounded-lg
-                        min-w-37
-                        py-3.5
-                        cursor-pointer
-                        transition-transform
-                        hover:brightness-120
+                    bg-colorBackgroundPrimary
+                    border border-colorAcentPrimary rounded-lg
+                    min-w-37
+                    py-3.5
+                    cursor-pointer
+                    transition-transform
+                    hover:brightness-120
                     '> CV </a>
                 </div>
             </article>
 
-            <article className='
-            pt-5 pb-6  lg:px-4 lg:py-6 mt-6
-            border-b border-t border-colorSutilBoard  lg:rounded-2xl lg:border
-            '>
-                <div className='flex flex-row gap-2 justify-evenly lg:gap-5'>
-                    {
-                        aptitudes.map(({id, Icon, aptitude})=>{
-                            return(
-                                <AptitudesModal key={id} Icon={Icon} aptitude={aptitude}></AptitudesModal>
-                            );
-                        })
-                    }
-                </div>
-            </article>
+            <AptitudesModal aptitudesCategory='hero'/>
         </section>
     )
 }
