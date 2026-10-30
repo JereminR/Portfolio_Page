@@ -13,7 +13,10 @@ export {
   Sparkles,
   Folder,
   House,
-  UserRound
+  UserRound,
+  FolderCode,
+  Heart,
+  BrainCircuit,
 } from "lucide-react";
 
 export {

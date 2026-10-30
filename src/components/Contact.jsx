@@ -7,23 +7,21 @@ export function Contact() {
         lg:mt-5 lg:mb-6 lg:rounded-2xl lg:border lg:border-colorSutilBoard lg:px-4 lg:py-4
         '>
             <article>
-                <h3 className='
-                text-colorTextSecondary
-                mb-1
-                '> Contacto </h3>
+                <div className='flex items-center gap-2 mb-2'>
+                    <Mail className='text-colorTextPrimary'/>
+                    <h3 className='
+                    text-colorTextSecondary
+                    mb-1
+                    '> Contacto </h3>
+                </div>
                 <p className='
                 text-colorTextTerciary text-xs
-                mb-2
+                mb-3
                 '> ¿Tienes una idea o un proyecto? ¡Me encantaría saber de ti!</p>
                 <div className='
                 text-xs text-colorTextTerciary
                 flex flex-col gap-1.5
                 '>
-                    <span className='flex gap-1.5 items-center'>
-                        <MapPin size={20} strokeWidth={1.8} aria-hidden='true'
-                        className='text-colorBrightnessPurple'/> 
-                        <span> Lima, Perú</span>
-                    </span>
                     <a href='https://www.linkedin.com/in/jeremin-roman-6258ab3a0/' target='_blank' rel='noopener noreferrer' className='flex items-center gap-1.5'>
                         <FaLinkedin size={25} color='var(--color-colorTextSecondary)' aria-hidden='true'/>
                     </a>

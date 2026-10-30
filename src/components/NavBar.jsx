@@ -116,7 +116,7 @@ export function NavBar () {
         ${isHidden ? '-translate-y-full' : ''}
         `}>
             <div className='
-            p-2.5 lg:px-6 lg:py-3 xl:px-8
+            p-2.5 md:px-6 lg:px-6 lg:py-3 xl:px-8
             flex items-center justify-between
             '>
                 <a href='#inicio' aria-label='Ir al inicio' className='

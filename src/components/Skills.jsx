@@ -8,7 +8,8 @@ import {
     SiFigma,
     SiGithub,
     PenTool,
-    Sparkles
+    Sparkles,
+    BrainCircuit,
 } from '../assets/Icons.jsx'
 
 const skills = [
@@ -80,11 +81,14 @@ export function Skills() {
         pt-5 pb-6
         '>
             <article>
-                <h3 className='
-                text-colorTextPrimary
-                '>
-                    Habilidades 
-                </h3>
+                <div className='flex items-center gap-2 mb-2'>
+                    <BrainCircuit size={24} className='text-colorTextPrimary'/>
+                    <h3 className='
+                    text-colorTextPrimary
+                    '>
+                        Habilidades 
+                    </h3>
+                </div>
 
                 <div className='
                 items-center

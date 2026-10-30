@@ -27,6 +27,7 @@ export function BackToTopButton() {
             aria-label='Volver al inicio de la página'
             aria-hidden={!isVisible}
             tabIndex={isVisible ? 0 : -1}
+            title='Volver al inicio'
             onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}
             className={`
                 fixed bottom-5 right-5 z-30

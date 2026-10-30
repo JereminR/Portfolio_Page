@@ -1,29 +1,44 @@
+import clsx from 'clsx'
+import {AptitudeItem} from './AptitudeItem.jsx'
+import {aptitudesHero, aptitudesAboutMe} from '../constants/aptitudesItems.js'
 
+const aptitudeByCategory = {
+    hero:aptitudesHero,
+    aboutme: aptitudesAboutMe,
+}
 
-export function AptitudesModal({Icon, aptitude}) {
+const aptitudeClass = {
+    hero: clsx('pt-5 pb-6 lg:px-4 lg:py-6 mt-6',
+        'border-b border-t border-colorSutilBoard lg:rounded-2xl lg:border',
+        'flex flex-row gap-2 justify-evenly lg:gap-5'
+    ),
+
+    aboutme: clsx('mt-4.5 lg:px-4',
+        'flex flex-row gap-10'
+    )
+
+}
+
+export function AptitudesModal({aptitudesCategory}) {
+    const aptitudeString = aptitudesCategory.toLowerCase();
+    const aptitudeItem = aptitudeByCategory[aptitudeString] ?? [];
+
+    const aptitudeClassString = aptitudesCategory.toLowerCase();
+    const aptitudeClassName = aptitudeClass[aptitudeClassString] ?? '';
     
     return(
-        <div className='
-        text-colorTextPrimary
-        max-w-25
-        flex flex-col items-center gap-1
-        lg:max-w-none lg:flex-1 lg:flex-row lg:gap-3
-        '>
-            <div className='
-            bg-colorElevatedCard
-            min-w-13 h-10
-            border border-colorSutilBoard rounded-2xl
-            flex  items-center justify-center
-            lg:min-w-11
-            '> <Icon size={20} strokeWidth={1.8} aria-hidden='true'
-            className='text-colorBrightnessPurple'/> </div>
-
-            <span className='
-                text-xs text-center
-                font-medium
-                lg:text-left
-                '> {aptitude} 
-            </span>
-        </div>
+        <article className={aptitudeClassName}>
+            {
+                aptitudeItem.map((aptitude)=>{
+                    return(
+                        <AptitudeItem 
+                        key={aptitude.id} Icon={aptitude.Icon} 
+                        aptitude={aptitude.aptitude} description={aptitude.description}
+                        flexDirection={aptitude.flexDirection}
+                        />
+                    );
+                })
+            }
+        </article>
     )
 }

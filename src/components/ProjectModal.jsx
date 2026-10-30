@@ -61,7 +61,7 @@ export function ProjectModal({img, name, description, herramientas, Icono, enlac
                                     border border-colorSutilBoard rounded-xl
                                     '>
                                         <Icono size={28} aria-hidden='true'
-                                        className='text-colorBrightnessPurple'/>
+                                        className='text-colorGithub'/>
                                     </a>
                                 )
                             })
