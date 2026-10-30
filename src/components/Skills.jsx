@@ -81,7 +81,10 @@ export function Skills() {
         pt-5 pb-6
         '>
             <article>
-                <div className='flex items-center gap-2 mb-2'>
+                <div className='
+                font-medium
+                mb-2
+                flex items-center gap-2'>
                     <BrainCircuit size={24} className='text-colorTextPrimary'/>
                     <h3 className='
                     text-colorTextPrimary

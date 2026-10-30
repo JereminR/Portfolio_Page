@@ -25,16 +25,16 @@ return(
                 </h1>
                 <span className='text-colorTextSecondary text-sm font-medium'> Ingeniero de Sistemas | Desarrollador Web </span>
                 <p className='
-                text-colorTextTerciary
-                text-sm text-pretty
+                text-colorTextTerciary text-sm text-pretty
                 max-w-11/12
                 mt-2.5 mb-5
                 leading-relaxed
                 lg:max-w-xl
                 '> 
-                    Creo soluciones web que combinan diseño, funcionalidad y una gran experiencia de usuario. 
+                    Desarrollo soluciones web que combinan implementación técnica, diseño y funcionalidad para crear experiencias digitales intuitivas y atractivas. 
                 </p>
                 <div className='
+                font-medium
                 flex gap-5
                 '>
                     <a href='#proyectos' className='

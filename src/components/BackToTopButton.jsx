@@ -33,6 +33,7 @@ export function BackToTopButton() {
                 fixed bottom-5 right-5 z-30
                 text-colorAcentSecondary bg-colorElevatedCard
                 size-9 border border-colorTextSecondary rounded-full
+                cursor-pointer
                 flex justify-center items-center
                 shadow-lg transition-all duration-300 ease-out
                 ${isVisible
