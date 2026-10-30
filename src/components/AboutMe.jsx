@@ -19,7 +19,7 @@ export function AboutMe() {
                     font-medium
                     mb-2
                     flex items-center gap-2'>
-                        <UserRound className='text-colorTextPrimary mb-2' />
+                        <UserRound className='text-colorAcentPrimary mb-2' />
                         <h2 className='
                         text-colorTextPrimary
                         mb-2

@@ -2,7 +2,8 @@
 
 .hero-background::before {
   position: absolute;
-  inset-block: 0;
+  top: -3.5rem;
+  bottom: 0;
   left: 50%;
   z-index: -1;
   width: 100vw;

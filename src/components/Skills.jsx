@@ -85,7 +85,7 @@ export function Skills() {
                 font-medium
                 mb-2
                 flex items-center gap-2'>
-                    <BrainCircuit size={24} className='text-colorTextPrimary'/>
+                    <BrainCircuit size={24} className='text-colorAcentPrimary'/>
                     <h3 className='
                     text-colorTextPrimary
                     '>

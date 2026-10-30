@@ -33,6 +33,7 @@ export function NavBar () {
         () => window.location.hash || '#inicio'
     )
     const [isHidden, setIsHidden] = useState(false)
+    const [isAtTop, setIsAtTop] = useState(() => window.scrollY === 0)
     const lastScrollY = useRef(window.scrollY)
     const downwardScrollStart = useRef(window.scrollY)
 
@@ -48,6 +49,7 @@ export function NavBar () {
     useEffect(() => {
         const handleScroll = () => {
             const currentScrollY = window.scrollY
+            setIsAtTop(currentScrollY === 0)
 
             if (window.innerWidth >= 768) {
                 setIsHidden(false)
@@ -67,6 +69,7 @@ export function NavBar () {
 
         const handleResize = () => {
             const currentScrollY = window.scrollY
+            setIsAtTop(currentScrollY === 0)
             lastScrollY.current = currentScrollY
             downwardScrollStart.current = currentScrollY
             setIsHidden(false)
@@ -117,8 +120,8 @@ export function NavBar () {
     return (
         <header className={`
         sticky top-0 z-20 md:sticky
-        text-colorTextPrimary bg-colorBackgroundPrimary
-        border-b border-colorTextPrimary/15
+        text-colorTextPrimary border-b border-colorSutilBoard
+        ${isAtTop ? 'bg-transparent' : 'bg-colorBackgroundPrimary'}
         transition-transform duration-200 ease-in-out md:translate-y-0
         ${isHidden ? '-translate-y-full' : ''}
         `}>
