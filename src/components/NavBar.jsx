@@ -91,14 +91,21 @@ export function NavBar () {
                 key={id}
                 href={href}
                 aria-current={isActive ? 'page' : undefined}
-                onClick={() => {
+                onClick={event => {
+                    if (href === '#inicio') {
+                        event.preventDefault()
+                        window.scrollTo({top: 0, behavior: 'smooth'})
+                    }
                     setActiveHref(href)
                     setIsMenuOpen(false)
                 }}
                 className='
-                text-sm
-                py-2 pl-3
-                flex items-center gap-2
+                text-sm text-colorTextPrimary
+                border-b-2 border-transparent
+                pt-2 pb-1.5 ml-3
+                flex items-center
+                transition-colors
+                hover:text-colorAcentSecondary hover:border-colorAcentSecondary
                 '>
             
                 {isMobile && <Icon size={19} strokeWidth={1.7} aria-hidden='true' />}
@@ -119,7 +126,11 @@ export function NavBar () {
             p-2.5 md:px-6 lg:px-6 lg:py-3 xl:px-8
             flex items-center justify-between
             '>
-                <a href='#inicio' aria-label='Ir al inicio' className='
+                <a href='#inicio' aria-label='Ir al inicio' onClick={event => {
+                    event.preventDefault()
+                    setActiveHref('#inicio')
+                    window.scrollTo({top: 0, behavior: 'smooth'})
+                }} className='
                 text-2xl bg-linear-to-r from-purple-500 via-violet-600 to-fuchsia-500
                 bg-clip-text text-transparent
                 '>JNR</a>
@@ -148,8 +159,10 @@ export function NavBar () {
                 </button>
 
                 <nav className='
-                hidden md:flex gap-9 text-sm font-normal lg:gap-10
+                text-sm font-medium
+                hidden md:flex gap-9  lg:gap-10
                 ' aria-label='Navegación principal'>
+                    
                     {navItems.map(item => renderNavLink(item))}
                 </nav>
             </div>

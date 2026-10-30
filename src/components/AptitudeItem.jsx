@@ -9,16 +9,18 @@ export function AptitudeItem({Icon, aptitude, description, flexDirection}) {
         'overflow'
     )
 
-    const descriptionClassName = clsx(
-        'text-xxs text-colorTextTerciary text-pretty',
-        flexDirection==='row' ? '' : 'hidden lg:flex'
-    )
-
     const aptitudeClassName = clsx(
         'text-xs', flexDirection==='row' ? '' : 'text-center',
         'font-medium',
         'lg:text-left',
     )
+
+    const descriptionClassName = clsx(
+        'text-xxs text-colorTextTerciary text-pretty',
+        flexDirection==='row' ? '' : 'hidden lg:flex'
+    )
+
+   
 
     return(
         <div className={containerClassName}>

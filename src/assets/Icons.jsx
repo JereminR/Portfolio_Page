@@ -17,6 +17,7 @@ export {
   FolderCode,
   Heart,
   BrainCircuit,
+  Construction,
 } from "lucide-react";
 
 export {

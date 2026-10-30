@@ -41,7 +41,10 @@ export function Footer() {
                     border-b border-colorSutilBoard
                     md:border-0
                     '>
-                        <a href='#inicio' aria-label='Ir al inicio' className='
+                        <a href='#inicio' aria-label='Ir al inicio' onClick={event => {
+                            event.preventDefault()
+                            window.scrollTo({top: 0, behavior: 'smooth'})
+                        }} className='
                         text-2xl bg-linear-to-r from-purple-500 via-violet-600 to-fuchsia-500
                         bg-clip-text text-transparent
                         '>
@@ -78,10 +81,10 @@ export function Footer() {
                     md-border-0
                     '>
                         <span className='
-                        text-colorAcentSecondary
+                        text-colorAcentSecondary font-medium
                         '> Enlaces rápidos </span>
                         <ul className='
-                        text-colorTextSecondary
+                        text-colorTextSecondary font-medium
                         mt-3
                         flex flex-col gap-3 md:grid md:grid-cols-2 md:gap-3
                         '>
@@ -90,7 +93,12 @@ export function Footer() {
                                     return(
                                         <li key={name} className='flex justify-between'>
                         
-                                            <a href={href} className='hover:text-colorAcentPrimary'>
+                                            <a href={href} onClick={event => {
+                                                if (href === '#inicio') {
+                                                    event.preventDefault()
+                                                    window.scrollTo({top: 0, behavior: 'smooth'})
+                                                }
+                                            }} className='hover:text-colorAcentPrimary'>
                                                 {name}
                                             </a>
                                             <ChevronRight size={18} aria-hidden='true'

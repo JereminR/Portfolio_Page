@@ -49,6 +49,7 @@ export function Projects() {
             <article>
                 <div className='
                 flex items-center gap-2 mb-2
+                font-medium
                 '>
                     <FolderCode className='text-colorTextPrimary'/>
                     <h2 className='text-colorTextPrimary'> Proyectos </h2>
