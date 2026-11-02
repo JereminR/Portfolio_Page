@@ -59,6 +59,8 @@ export function ProjectModal({img, name, description, herramientas, Icono, enlac
                                     p-2
                                     bg-colorSurfaceCard
                                     border border-colorSutilBoard rounded-xl
+                                    lg:transition-transform lg:duration-300 lg:ease-out
+                                    lg:hover:scale-110
                                     '>
                                         <Icono size={28} aria-hidden='true'
                                         className='text-colorGithub'/>

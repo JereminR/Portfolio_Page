@@ -64,6 +64,8 @@ export function Footer() {
                                         p-2
                                         bg-colorSurfaceCard
                                         border border-colorSutilBoard rounded-xl
+                                        lg:transition-transform lg:duration-300 lg:ease-out
+                                        lg:hover:scale-110
                                         '
                                         >
                                             <Icon size={24} aria-hidden='true'/>
