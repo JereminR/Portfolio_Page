@@ -17,61 +17,61 @@ const skills = [
         id:10,
         Icon:SiHtml5,
         skill: 'HTML',
-        color: 'color-Html'
+        color: 'colorHtml'
     },
 
     {
         id:11,
         Icon:FaCss3,
         skill: 'CSS',
-        color:'color-Css'
+        color:'colorCss'
     },
 
     {
         id:12,
         Icon:FaJs,
         skill: 'JS',
-        color:'color-JS'
+        color:'colorJs'
     },
 
     {
         id:13,
         Icon:SiReact,
         skill: 'React',
-        color:'color-React'
+        color:'colorReact'
     },
 
     {
         id:14,
         Icon:SiTailwindcss,
         skill: 'Tailwind CSS',
-        color:'color-TailwindCss'
+        color:'colorTailwindCss'
     },
 
     {
         id:15,
         Icon:SiFigma,
         skill: 'Figma',
-        color:'color-Figma'
+        color:'colorFigma'
     },
 
     {
         id:16,
         Icon:SiGithub,
         skill: 'Git & GitHub',
-        color:'color-GitHub'
+        color:'colorGithub'
     },
     {
         id:17,
         Icon:PenTool,
         skill: 'UX/UI',
-        color:'color-colorAcentPrimary'
+        color:'colorAcentPrimary'
     },
     {
         id:18,
         Icon:Sparkles,
         skill: 'Heramientas de IA',
-        color:'color-Css'
+        color:'colorCss'
     }
 ]
 

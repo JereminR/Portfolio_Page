@@ -13,7 +13,7 @@ export function SkillModal({Icon, skill, color}) {
             <div className='
             flex justify-center
             '>
-                <Icon size={20} color= {`var(--${color})`} aria-hidden='true'/>
+                <Icon size={20} color= {`var(--color-${color})`} aria-hidden='true'/>
                 
             </div>
 

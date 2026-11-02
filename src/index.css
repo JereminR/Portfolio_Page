@@ -1,16 +1,5 @@
 @import 'tailwindcss';
 
-:root {
-  --color-Html: #e34f26;
-  --color-Css: #1572b6;
-  --color-JS: #f7df1e;
-  --color-React: #61dafb;
-  --color-TailwindCss: #06b6d4;
-  --color-Figma: #f24e1e;
-  --color-GitHub: #eee;
-  --color-Linkedin: #0a66c2;
-}
-
 @layer base {
   * {
     box-sizing: border-box;
@@ -29,7 +18,7 @@
 
 }
 
-@theme {
+@theme static {
   /* COLORS */
   /* Background colors */
   --color-colorBackgroundPrimary: #080914;
@@ -63,5 +52,12 @@
 
   /* ICONS */
   --color-colorGithub: #eee;
+  --color-colorHtml: #e34f26;
+  --color-colorCss: #1572b6;
+  --color-colorJs: #f7df1e;
+  --color-colorReact: #61dafb;
+  --color-colorTailwindCss: #06b6d4;
+  --color-colorFigma: #f24e1e;
+  --color-colorLinkedin: #0a66c2;
 
 }
